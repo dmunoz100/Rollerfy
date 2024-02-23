@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795752166307",
+    "project_id": "rollerfy",
+    "storage_bucket": "rollerfy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795752166307:android:892c4d5dd039d85654e016",
+        "android_client_info": {
+          "package_name": "com.davidmunozbenavides.rollerfy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiP6abWPcoVbzhtAm6Eb4YuG_debil3n4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

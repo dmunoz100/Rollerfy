@@ -33,6 +33,7 @@ import {useFirebaseStore} from './stores/useFirebaseStore'
 import { Events } from './pages/Events';
 import { Agenda } from './pages/Agenda';
 import { LoadingSpin } from './components/LoadingSpin';
+import { usePushNotification } from './hooks/usePushNotification';
 
 
 setupIonicReact();
@@ -40,14 +41,23 @@ setupIonicReact();
 export const App: React.FC = () => 
 {
 
-  const {setbd} = useFirebaseStore((state) => state);
+  const {bd,setbd} = useFirebaseStore();
+  const PushNotificationHook = usePushNotification();
 
   useEffect(()=>{
     // Initialize Firebase
     const app = initializeApp(FIREBASE_CONFIG);
     const db = getFirestore(app);
-    setbd(db);
+    setbd(db);   
   },[]);
+
+  useEffect(()=>{
+    if(bd){
+     (async ()=>{
+      await PushNotificationHook.SetUpPushNotification();
+     })();
+    }
+  },[bd]);
 
 
   return(
