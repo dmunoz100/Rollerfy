@@ -1,0 +1,7 @@
+{
+  "name": "Rollerfy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
